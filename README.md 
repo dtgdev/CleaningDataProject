@@ -1,0 +1,31 @@
+
+
+The code works as follows:
+ 
+ First, it merges the training and the test sets to create one data set.
+ 	Get the X training data and store it into a temporary file
+ 	Get the Y training data and store it into a temporary file
+ 	Get the subject training data and store it into a temporary file
+ 	Then merge all files using the rbind command. This should be a problem as all the files
+ 	are identical, the same number of columns with labels. 
+ 	
+ Extracts only the measurements on the mean and standard deviation for each measurement. 
+ 	
+ 	Read the features file
+ 	get the row's indices of the mean and std from column 2
+ 	get the filtered data based on the mean and std from the X training data based
+ 	on the indices and convert to a lower case
+ 	
+  Uses descriptive activity names to name the activities in the data set 
+ 
+   read activity_labels.txt file
+   convert it as character 
+   apply descriptive activity names: Then appropriately labels the data set with descriptive activity names
+   
+   Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
+     loop by the number of subjects as an outer loop
+     inner loop based on the number of activities
+     And apply the average of each variable for each activity
+     And apply the average of each variable for each subject
+     then write the aggregated result to a file
+   
